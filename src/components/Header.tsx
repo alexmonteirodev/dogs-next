@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import Image from "next/image";
 
 const Header = () => {
-  const user = true;
+  const user = false;
   return (
     <header className={styles.header}>
       <nav className={`container ${styles.nav}`}>
