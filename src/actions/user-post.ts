@@ -15,7 +15,7 @@ const userPost = async (state: StateType, formData: FormData) => {
   const email = formData.get("username") as string | null;
   const password = formData.get("password") as string | null;
 
-  console.log(username, password);
+  //   console.log(username, password);
 
   try {
     if (!username || !password || !email) throw new Error("Preencha os dados");
@@ -27,7 +27,7 @@ const userPost = async (state: StateType, formData: FormData) => {
     if (!r.ok) throw new Error("Email ou Usuário já cadastrado.");
     const data = await r.json();
 
-    const { ok } = await login({ ok: true, error: "", data }, formData);
+    const { ok } = await login({ ok: true, error: "", data: null }, formData);
 
     if (!ok) throw new Error("Erro ao logar");
 

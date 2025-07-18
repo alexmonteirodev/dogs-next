@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Metadata } from "next";
+import LoginPerdeuForm from "@/components/login/login-perdeu-form";
 
 export const metadata: Metadata = {
   title: "Perdeu a senha | Dogs",
@@ -8,7 +9,12 @@ export const metadata: Metadata = {
 };
 
 const PerdeuPage = () => {
-  return <div>PerdeuPage</div>;
+  return (
+    <div className="animeLeft">
+      <h1 className="title">Perdeu a senha?</h1>
+      <LoginPerdeuForm />
+    </div>
+  );
 };
 
 export default PerdeuPage;
