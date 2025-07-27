@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { UserContext } from "../../UserContext";
 import FeedIcon from "@/icons/feed-icon";
 import EstatisticasIcon from "@/icons/estatisticas-icon";
 import AdicionarIcon from "@/icons/adicionar-icon";
