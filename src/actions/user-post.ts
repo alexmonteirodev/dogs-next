@@ -30,6 +30,7 @@ const userPost = async (state: StateType, formData: FormData) => {
     const { ok } = await login({ ok: true, error: "", data: null }, formData);
 
     if (!ok) throw new Error("Erro ao logar");
+    if (!data) throw new Error("Erro ao pegar dados");
 
     return {
       ok: true,

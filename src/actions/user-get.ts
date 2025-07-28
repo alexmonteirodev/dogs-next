@@ -1,6 +1,6 @@
 "use server";
 
-import { USER_GET, USER_POST } from "@/functions/api";
+import { USER_GET } from "@/functions/api";
 import apiError from "@/functions/api-error";
 import { cookies } from "next/headers";
 
