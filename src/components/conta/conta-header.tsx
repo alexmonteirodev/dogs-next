@@ -8,6 +8,8 @@ import styles from "./conta-header.module.css";
 import useMedia from "@/hooks/use-media";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import logout from "@/actions/logout";
+import { useUser } from "@/context/user-context";
 
 function getTitile(pathname: string) {
   switch (pathname) {
@@ -23,8 +25,11 @@ function getTitile(pathname: string) {
 const ContaHeader = () => {
   const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = React.useState(false);
-  function handleLogout() {
-    // userLogout();
+
+  const { setUser } = useUser();
+  async function handleLogout() {
+    await logout();
+    setUser(null);
   }
 
   const pathname = usePathname();
