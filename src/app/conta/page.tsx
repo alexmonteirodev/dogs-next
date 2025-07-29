@@ -10,10 +10,9 @@ export const metadata: Metadata = {
 
 const ContaPage = async () => {
   const { data: user } = await userGet();
-  console.log(user);
+  // console.log(user);
 
   const photos = await photosGet({ user: user?.username });
-  console.log(photos);
   return (
     <main>
       {photos.data?.length ? (

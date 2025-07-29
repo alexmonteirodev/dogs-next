@@ -9,10 +9,10 @@ type PhotosProp = {
 };
 
 const FeedPage = ({ photos }: { photos: PhotosProp }) => {
-  // console.log("photos em FeedPage:", photos);
+  console.log("photos em FeedPage:", photos);
   return (
     <div>
-      <FeedPhotos photos={Array.isArray(photos.data) ? photos.data : []} />
+      <FeedPhotos photos={photos.data} />
     </div>
   );
 };
