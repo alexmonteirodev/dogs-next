@@ -2,10 +2,17 @@ import React from "react";
 import FeedPhotos from "./feed-photos";
 import { Photo } from "@/actions/photos-get";
 
-const FeedPage = ({ photos }: { photos: Photo[] }) => {
+type PhotosProp = {
+  data: Photo[];
+  error: string;
+  ok: boolean;
+};
+
+const FeedPage = ({ photos }: { photos: PhotosProp }) => {
+  // console.log("photos em FeedPage:", photos);
   return (
     <div>
-      <FeedPhotos photos={photos} />
+      <FeedPhotos photos={Array.isArray(photos.data) ? photos.data : []} />
     </div>
   );
 };

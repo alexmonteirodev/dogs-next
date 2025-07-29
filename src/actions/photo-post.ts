@@ -19,6 +19,7 @@ const photoPost = async (state: StateType, formData: FormData) => {
   const idade = formData.get("idade") as string | null;
   const peso = formData.get("peso") as string | null;
   const img = formData.get("img") as File;
+  console.log(token);
   try {
     if (!token || !nome || !idade || !peso || img?.size === 0)
       throw new Error("Preencha os dados");
