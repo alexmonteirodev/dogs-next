@@ -5,11 +5,12 @@ import apiError from "@/functions/api-error";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { Photo } from "./photos-get";
 
 export type StateType = {
   ok: boolean;
   error: string;
-  data: null;
+  data: Photo[] | null;
 };
 
 const photoPost = async (state: StateType, formData: FormData) => {

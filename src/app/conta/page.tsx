@@ -14,9 +14,9 @@ const ContaPage = async () => {
 
   const photos = await photosGet({ user: user?.username });
   return (
-    <main>
+    <section>
       {photos.data?.length ? (
-        <FeedPage photos={photos} />
+        <FeedPage photos={photos} user={user?.username} />
       ) : (
         <div>
           <p
@@ -33,7 +33,7 @@ const ContaPage = async () => {
           </Link>
         </div>
       )}
-    </main>
+    </section>
   );
 };
 

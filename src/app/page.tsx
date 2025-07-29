@@ -6,7 +6,7 @@ export default async function Home() {
   console.log("data aqui", photos);
   return (
     <section className="container mainContainer">
-      <Feed photos={photos} />
+      {photos && <Feed photos={photos} />}
     </section>
   );
 }
