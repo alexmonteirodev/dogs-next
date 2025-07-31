@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "@/components/photo/photo-content.module.css";
-// import PhotoComments from "./PhotoComments";
+import PhotoComments from "@/components/photo/photo-comments";
 import PhotoDelete from "@/components/photo/photo-delete";
 import Link from "next/link";
 import { useUser } from "@/context/user-context";
@@ -42,7 +42,7 @@ const PhotoContent = ({
           </ul>
         </div>
       </div>
-      {/* <PhotoComments single={single} id={photo.id} comments={comments} /> */}
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
