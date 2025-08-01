@@ -6,10 +6,7 @@ import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { Comment } from "./photo-get";
 
-export default async function commentPost(
-  state: {}, // ou `prevState: any`, tanto faz aqui
-  formData: FormData
-) {
+export default async function commentPost(state: {}, formData: FormData) {
   const token = (await cookies()).get("token")?.value;
   const comment = formData.get("comment") as string | null;
   const id = formData.get("id") as string | null;
